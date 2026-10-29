@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGymS4.Views.vResumen"
+             Title="Resumen">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" />
+    </Shell.BackButtonBehavior>
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout>
+                <Label x:Name="lblUsuarioConectado" />
+                <Label Text="RESUMEN" />
+
+                <!-- 9 filas x 2 columnas -->
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,*">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Nombre" />
+                    <Label Grid.Row="0" Grid.Column="1" x:Name="lblNombre" />
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="Apellido" />
+                    <Label Grid.Row="1" Grid.Column="1" x:Name="lblApellido" />
+
+                    <Label Grid.Row="2" Grid.Column="0" Text="Edad" />
+                    <Label Grid.Row="2" Grid.Column="1" x:Name="lblEdad" />
+
+                    <Label Grid.Row="3" Grid.Column="0" Text="Fecha de inicio" />
+                    <Label Grid.Row="3" Grid.Column="1" x:Name="lblFechaInicio" />
+
+                    <Label Grid.Row="4" Grid.Column="0" Text="Plan" />
+                    <Label Grid.Row="4" Grid.Column="1" x:Name="lblPlan" />
+
+                    <Label Grid.Row="5" Grid.Column="0" Text="Casillero" />
+                    <Label Grid.Row="5" Grid.Column="1" x:Name="lblCasillero" />
+
+                    <Label Grid.Row="6" Grid.Column="0" Text="Monto Inicial" />
+                    <Label Grid.Row="6" Grid.Column="1" x:Name="lblMontoInicial" />
+
+                    <Label Grid.Row="7" Grid.Column="0" Text="Pago mensual" />
+                    <Label Grid.Row="7" Grid.Column="1" x:Name="lblPagoMensual" />
+
+                    <Label Grid.Row="8" Grid.Column="0" Text="Pago Total" />
+                    <Label Grid.Row="8" Grid.Column="1" x:Name="lblPagoTotal" />
+                </Grid>
+
+                <Button Text="Exportar resumen" Clicked="btnExportarResumen_Clicked" />
+                <Button Text="Cerrar sesión" Clicked="btnCerrarSesion_Clicked" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
