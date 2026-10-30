@@ -3,23 +3,30 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppGymS4.Views.vLogin"
-             Title="Login">
+             Title="Inicio de Sesión">
+    <Shell.TitleView>
+        <Label Text="Inicio de Sesión" Style="{StaticResource TituloLogin}" VerticalOptions="Center" />
+    </Shell.TitleView>
     <ContentPage.Content>
-        <VerticalStackLayout Spacing="10" Padding="20">
-            <Image Source="logo.png" />
-            <Label Text="GIMNASIO - INICIO DE SESIÓN" />
+        <ScrollView>
+            <VerticalStackLayout Style="{StaticResource PaginaLayout}">
+                <Image Source="logo.png" Style="{StaticResource Logo}" />
 
-            <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="*,*">
-                <Label Grid.Row="0" Grid.Column="0" Text="Usuario" />
-                <Entry Grid.Row="0" Grid.Column="1" x:Name="txtUsuario" Placeholder="Ingrese usuario" />
+                <Border Style="{StaticResource Tarjeta}">
+                    <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*" Style="{StaticResource FormGrid}">
+                        <Label Grid.Row="0" Grid.Column="0" Text="Usuario" Style="{StaticResource EtiquetaCampo}" />
+                        <Entry Grid.Row="0" Grid.Column="1" x:Name="txtUsuario" Placeholder="Ingrese usuario" />
 
-                <Label Grid.Row="1" Grid.Column="0" Text="Contraseña" />
-                <Entry Grid.Row="1" Grid.Column="1" x:Name="txtContrasena" Placeholder="Ingrese contraseña" IsPassword="True" />
+                        <Label Grid.Row="1" Grid.Column="0" Text="Contraseña" Style="{StaticResource EtiquetaCampo}" />
+                        <Entry Grid.Row="1" Grid.Column="1" x:Name="txtContrasena" Placeholder="Ingrese contraseña" IsPassword="True" />
 
-                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="Iniciar sesión" Clicked="btnIniciarSesion_Clicked" />
-            </Grid>
+                        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="Iniciar sesión"
+                                Style="{StaticResource BotonPrincipal}" Clicked="btnIniciarSesion_Clicked" />
+                    </Grid>
+                </Border>
 
-            <Button Text="Acerca de" Clicked="btnAcercaDe_Clicked" />
-        </VerticalStackLayout>
+                <Button Text="Acerca de" Style="{StaticResource BotonSecundario}" Clicked="btnAcercaDe_Clicked" />
+            </VerticalStackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

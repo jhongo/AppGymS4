@@ -35,7 +35,7 @@ public partial class vLogin : ContentPage
     private async void btnAcercaDe_Clicked(object? sender, EventArgs e)
     {
         await DisplayAlertAsync("Acerca de",
-            "Nombre: (tu nombre)\nCarrera: (tu carrera)\nParalelo: (tu paralelo)", "OK");
+            "Nombre: John Gomez\nCarrera: Ingeniería Informática\nParalelo: A", "OK");
     }
 
     private static bool ValidarCredenciales(string usuario, string contrasena)

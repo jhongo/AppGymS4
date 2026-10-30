@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Estilos globales de AppGymS4 (Login, Registro y Resumen) -->
+
+    <Color x:Key="GymMorado">Purple</Color>
+    <Color x:Key="GymAzul">Blue</Color>
+    <Color x:Key="GymFondoTarjeta">#F5F1FA</Color>
+    <Color x:Key="GymFondoTarjetaOscuro">#2A2433</Color>
+
+    <!-- Requerimiento: Spacing 10 y Padding 20 -->
+    <Style x:Key="PaginaLayout" TargetType="VerticalStackLayout">
+        <Setter Property="Spacing" Value="10" />
+        <Setter Property="Padding" Value="20" />
+    </Style>
+
+    <Style x:Key="FormGrid" TargetType="Grid">
+        <Setter Property="RowSpacing" Value="10" />
+        <Setter Property="ColumnSpacing" Value="10" />
+    </Style>
+
+    <Style x:Key="Tarjeta" TargetType="Border">
+        <Setter Property="Padding" Value="15" />
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 12" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource GymFondoTarjeta}, Dark={StaticResource GymFondoTarjetaOscuro}}" />
+    </Style>
+
+    <Style x:Key="Logo" TargetType="Image">
+        <Setter Property="HeightRequest" Value="120" />
+        <Setter Property="Aspect" Value="AspectFit" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
+
+    <!-- Requerimiento Login: morado, 26, centrado y negrita -->
+    <Style x:Key="TituloLogin" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource GymMorado}" />
+        <Setter Property="FontSize" Value="26" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
+
+    <!-- Requerimiento Registro: azul, 22, centrado (se reutiliza en Resumen) -->
+    <Style x:Key="TituloPagina" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource GymAzul}" />
+        <Setter Property="FontSize" Value="22" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="Margin" Value="0,0,0,10" />
+    </Style>
+
+    <Style x:Key="UsuarioConectado" TargetType="Label">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontAttributes" Value="Italic" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray300}}" />
+        <Setter Property="HorizontalOptions" Value="End" />
+    </Style>
+
+    <Style x:Key="EtiquetaCampo" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="ValorResumen" TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="ValorDestacado" TargetType="Label" BasedOn="{StaticResource ValorResumen}">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="TextColor" Value="{StaticResource GymMorado}" />
+    </Style>
+
+    <Style x:Key="BotonPrincipal" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource GymMorado}" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="MinimumHeightRequest" Value="48" />
+    </Style>
+
+    <Style x:Key="BotonSecundario" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource GymMorado}, Dark={StaticResource PrimaryDark}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource GymMorado}, Dark={StaticResource PrimaryDark}}" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="MinimumHeightRequest" Value="48" />
+    </Style>
+
+</ResourceDictionary>

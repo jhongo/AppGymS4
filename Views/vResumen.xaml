@@ -9,42 +9,44 @@
     </Shell.BackButtonBehavior>
     <ContentPage.Content>
         <ScrollView>
-            <VerticalStackLayout>
-                <Label x:Name="lblUsuarioConectado" />
-                <Label Text="RESUMEN" />
+            <VerticalStackLayout Style="{StaticResource PaginaLayout}">
+                <Label x:Name="lblUsuarioConectado" Style="{StaticResource UsuarioConectado}" />
+                
 
                 <!-- 9 filas x 2 columnas -->
-                <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,*">
-                    <Label Grid.Row="0" Grid.Column="0" Text="Nombre" />
-                    <Label Grid.Row="0" Grid.Column="1" x:Name="lblNombre" />
+                <Border Style="{StaticResource Tarjeta}">
+                    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,*" Style="{StaticResource FormGrid}">
+                        <Label Grid.Row="0" Grid.Column="0" Text="Nombre" Style="{StaticResource EtiquetaCampo}" />
+                        <Label Grid.Row="0" Grid.Column="1" x:Name="lblNombre" Style="{StaticResource ValorResumen}" />
 
-                    <Label Grid.Row="1" Grid.Column="0" Text="Apellido" />
-                    <Label Grid.Row="1" Grid.Column="1" x:Name="lblApellido" />
+                        <Label Grid.Row="1" Grid.Column="0" Text="Apellido" Style="{StaticResource EtiquetaCampo}" />
+                        <Label Grid.Row="1" Grid.Column="1" x:Name="lblApellido" Style="{StaticResource ValorResumen}" />
 
-                    <Label Grid.Row="2" Grid.Column="0" Text="Edad" />
-                    <Label Grid.Row="2" Grid.Column="1" x:Name="lblEdad" />
+                        <Label Grid.Row="2" Grid.Column="0" Text="Edad" Style="{StaticResource EtiquetaCampo}" />
+                        <Label Grid.Row="2" Grid.Column="1" x:Name="lblEdad" Style="{StaticResource ValorResumen}" />
 
-                    <Label Grid.Row="3" Grid.Column="0" Text="Fecha de inicio" />
-                    <Label Grid.Row="3" Grid.Column="1" x:Name="lblFechaInicio" />
+                        <Label Grid.Row="3" Grid.Column="0" Text="Fecha de inicio" Style="{StaticResource EtiquetaCampo}" />
+                        <Label Grid.Row="3" Grid.Column="1" x:Name="lblFechaInicio" Style="{StaticResource ValorResumen}" />
 
-                    <Label Grid.Row="4" Grid.Column="0" Text="Plan" />
-                    <Label Grid.Row="4" Grid.Column="1" x:Name="lblPlan" />
+                        <Label Grid.Row="4" Grid.Column="0" Text="Plan" Style="{StaticResource EtiquetaCampo}" />
+                        <Label Grid.Row="4" Grid.Column="1" x:Name="lblPlan" Style="{StaticResource ValorResumen}" />
 
-                    <Label Grid.Row="5" Grid.Column="0" Text="Casillero" />
-                    <Label Grid.Row="5" Grid.Column="1" x:Name="lblCasillero" />
+                        <Label Grid.Row="5" Grid.Column="0" Text="Casillero" Style="{StaticResource EtiquetaCampo}" />
+                        <Label Grid.Row="5" Grid.Column="1" x:Name="lblCasillero" Style="{StaticResource ValorResumen}" />
 
-                    <Label Grid.Row="6" Grid.Column="0" Text="Monto Inicial" />
-                    <Label Grid.Row="6" Grid.Column="1" x:Name="lblMontoInicial" />
+                        <Label Grid.Row="6" Grid.Column="0" Text="Monto Inicial" Style="{StaticResource EtiquetaCampo}" />
+                        <Label Grid.Row="6" Grid.Column="1" x:Name="lblMontoInicial" Style="{StaticResource ValorResumen}" />
 
-                    <Label Grid.Row="7" Grid.Column="0" Text="Pago mensual" />
-                    <Label Grid.Row="7" Grid.Column="1" x:Name="lblPagoMensual" />
+                        <Label Grid.Row="7" Grid.Column="0" Text="Pago mensual" Style="{StaticResource EtiquetaCampo}" />
+                        <Label Grid.Row="7" Grid.Column="1" x:Name="lblPagoMensual" Style="{StaticResource ValorResumen}" />
 
-                    <Label Grid.Row="8" Grid.Column="0" Text="Pago Total" />
-                    <Label Grid.Row="8" Grid.Column="1" x:Name="lblPagoTotal" />
-                </Grid>
+                        <Label Grid.Row="8" Grid.Column="0" Text="Pago Total" Style="{StaticResource EtiquetaCampo}" />
+                        <Label Grid.Row="8" Grid.Column="1" x:Name="lblPagoTotal" Style="{StaticResource ValorDestacado}" />
+                    </Grid>
+                </Border>
 
-                <Button Text="Exportar resumen" Clicked="btnExportarResumen_Clicked" />
-                <Button Text="Cerrar sesión" Clicked="btnCerrarSesion_Clicked" />
+                <Button Text="Exportar resumen" Style="{StaticResource BotonPrincipal}" Clicked="btnExportarResumen_Clicked" />
+                <Button Text="Cerrar sesión" Style="{StaticResource BotonSecundario}" Clicked="btnCerrarSesion_Clicked" />
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
